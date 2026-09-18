@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #050608;
+    --color-card: #0B0D10;
+    --color-border: #1C2229;
+    --color-accent: #E53935;
+  }
+
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    background-color: #050608;
+    color: #E8EAED;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom precision scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #050608;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1C2229;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E53935;
+  }
+}
+
+@layer utilities {
+  /* Carbon fiber dot grid pattern */
+  .bg-carbon-grid {
+    background-size: 32px 32px;
+    background-image: 
+      radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+
+  .bg-fine-grid {
+    background-size: 16px 16px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+
+  .glass-card {
+    background: rgba(11, 13, 16, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .glass-header {
+    background: rgba(5, 6, 8, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 35px rgba(229, 57, 53, 0.25);
+  }
+
+  .glow-red-sm {
+    box-shadow: 0 0 15px rgba(229, 57, 53, 0.2);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+  }
+
+  .clip-chamfer {
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+
+  .clip-badge {
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  }
+}
+
+/* Swiper custom styling for dark automotive aesthetic */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.25) !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+  width: 24px !important;
+  height: 3px !important;
+  border-radius: 2px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #E53935 !important;
+  width: 48px !important;
+}

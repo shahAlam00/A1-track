@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, Clock, ShieldCheck, ArrowUpRight } from 'lucide-re
 
 interface FooterProps {
   onOpenQuote: (category?: string) => void;
-}
+} 
 
 export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
   return (
